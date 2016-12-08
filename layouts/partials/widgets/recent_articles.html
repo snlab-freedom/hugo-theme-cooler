@@ -4,7 +4,7 @@
     <div class="widget">
         <ul id="recent-post">
             <li id="first-recent"><h3 class="widget-title"> Latest Articles </h3></li>
-            {{ range first 10 (where .Site.Pages.ByDate.Reverse "Section" "post") }}
+            {{ range first 10 (where .Site.Pages.ByDate.Reverse "Section" "posts") }}
             <li>
                 <!--
                     <div class="item-thumbnail">

@@ -7,7 +7,7 @@ var talaria = (function (P) {
      */
     var CONFIG = {},
         DEFAULTS = {
-            COMMENTABLE_CONTENT_PATH_PREFIX: 'content/post/',
+            COMMENTABLE_CONTENT_PATH_PREFIX: 'content/posts/',
             CONTENT_SUFFIX: '.md',
             CACHE_TIMEOUT: 60 * 60 * 1000, // cache github data for 1 hour
             PAGINATION_SCHEME: /\/post\d+\//,
@@ -30,7 +30,7 @@ var talaria = (function (P) {
                 throw new Error('When using commit-based comments,' +
                                 ' talaria requires the use of' +
                                 ' permalinks that include the date' +
-                                ' of the post');
+                                ' of the posts');
             }
             return /[\.\w\-_:\/]+\/([\w\-\.]+)\.html$/;
         default: return CONFIG.PERMALINK_STYLE;
@@ -228,7 +228,7 @@ var talaria = (function (P) {
         wrapper.innerHTML =
             '<div id="talaria-wrap-' + id + '" class="talaria-wrapper">' +
             '  <div class="talaria-load-error hide">' +
-            '    Unable to retrieve comments for this post.' +
+            '    Unable to retrieve comments for this posts.' +
             '  </div>' +
             '  <div class="talaria-comment-count' + (commentsHidden ? '' : ' hide') + '">' +
             '    <a id="talaria-show-' + id + '" href="' + url + '" target="_blank">' + (ccount === 0 ? 'Be the first to comment' : (ccount + ' comment' + (ccount === 1 ? '' : 's'))) + '</a>' +
@@ -326,7 +326,7 @@ var talaria = (function (P) {
                         var errorMsg = article.querySelector('div.talaria-load-error'),
                             commentCount = article.querySelector('div.talaria-comment-count');
 
-                        errorMsg.innerHTML = 'Unable to find commits for this post.';
+                        errorMsg.innerHTML = 'Unable to find commits for this posts.';
                         errorMsg.classList.remove('hide');
                         commentCount.classList.add('hide');
                     });
@@ -486,7 +486,7 @@ var talaria = (function (P) {
             elem.innerHTML = 'Unable to find a matching gist.';
             break;
         default:
-            elem.innerHTML = 'An error occurred retrieving comments for this post.';
+            elem.innerHTML = 'An error occurred retrieving comments for this posts.';
         }
     };
 

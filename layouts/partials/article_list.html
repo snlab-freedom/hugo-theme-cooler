@@ -1,7 +1,7 @@
 <section id="main">
 
     {{ partial "article_first" . }}
-    {{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
+    {{ $paginator := .Paginate (where .Site.Pages "Type" "posts") }}
     {{ range $paginator.Pages }}
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
 

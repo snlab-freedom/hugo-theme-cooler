@@ -26,28 +26,30 @@ theme = "hugo-theme-cooler"
 # Create custom menu entries by defining a name and a url for
 # them. You can set weight to decide the index of each item.
 [[menu.main]]
-    before = true
     name  = "Home"
     identifier = "home"
     url   = "/"
     weight = 0
 
 [[menu.main]]
-    before = false
     name   = "Posts"
-    url    = "post/"
-    identifier = "post"
+    url    = "posts/"
+    identifier = "posts"
     weight = 100
 
 [[menu.main]]
-    before = false
+    name = "Members"
+    identifier = "members"
+    url = "/members"
+    weight = 150
+
+[[menu.main]]
     name  = "Publications"
     url   = "publications/"
     identifier = "publications"
     weight = 200
 
 [[menu.main]]
-    before = false
     name  = "Projects"
     identifier = "projects"
     weight = 300
