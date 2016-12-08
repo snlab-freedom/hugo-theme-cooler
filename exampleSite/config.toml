@@ -1,14 +1,13 @@
-baseurl = "https://syui.github.io/"
+baseurl = "https://snlab-freedom.github.io/"
 languageCode = "en-us"
-title = "hugo-theme-arch"
+title = "SNLab Freedom Zone"
 # Enable comments by entering your Disqus shortname
 disqusShortname = ""
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = ""
 # Define the number of posts per site
 paginate = 10
-theme = ""
-#theme = "hugo-theme-arch"
+theme = "hugo-theme-cooler"
 
 [permalinks]
     post = "/:year/:month/:day/:slug"
@@ -17,31 +16,106 @@ theme = ""
     # Tell me who you're
     location = ""
     site_description = ""
-    copyright  = "Powered by [Hugo](//gohugo.io). Theme by [hugo-theme-arch](https://github.com/syui/hugo-theme-arch)."
+    organization = "SNLab.Freedom"
+    organization_url = "https://github.com/snlab_freedom"
+    copyright  = "Powered by [Hugo](//gohugo.io). Theme by [cooler](https://gitlab.com/snlab-freedom/hugo-theme-cooler)."
 
     # Format dates with Go's time formating
     date_format = "2006-01-02"
 
-# Create custom menu entries by defining a label and a link for
-# them. Since you can also link posts you've the option the
-# place the links before or after them.
-#
-# E.g.: "Home" appears before all linked posts in the menu
-# and "Tags" / "Categories" after them.
-[[params.menu]]
+# Create custom menu entries by defining a name and a url for
+# them. You can set weight to decide the index of each item.
+[[menu.main]]
     before = true
-    label  = "Home"
-    link   = "/"
+    name  = "Home"
+    identifier = "home"
+    url   = "/"
+    weight = 0
 
-[[params.menu]]
+[[menu.main]]
     before = false
-    label  = "Tags"
-    link   = "tags/"
+    name   = "Posts"
+    url    = "post/"
+    identifier = "post"
+    weight = 100
 
-[[params.menu]]
+[[menu.main]]
     before = false
-    label  = "Categories"
-    link   = "categories/"
+    name  = "Publications"
+    url   = "publications/"
+    identifier = "publications"
+    weight = 200
+
+[[menu.main]]
+    before = false
+    name  = "Projects"
+    identifier = "projects"
+    weight = 300
+
+# You can set the nested submenu by indicate the parent.
+[[menu.main]]
+    name = "Project1"
+    url = "#"
+    parent = "projects"
+    weight = 300
+
+[[menu.main]]
+    name = "Project2"
+    url = "#"
+    parent = "projects"
+    weight = 310
+
+[[menu.main]]
+    name = "Project3"
+    url = "#"
+    parent = "projects"
+    weight = 320
+
+[[menu.main]]
+    name = "Project4"
+    url = "#"
+    parent = "projects"
+    weight = 330
+
+# Set a `pre` attribute for a submenu to display a divider.
+[[menu.main]]
+    pre = "<li role ='separator' class='divider'></li>"
+    name = "Tutorials"
+    parent = "projects"
+    identifier = "tutorials"
+    weight = 340
+
+[[menu.main]]
+    name = "Write your first project"
+    url = "#"
+    parent = "tutorials"
+
+[[menu.main]]
+    name = "Test and deploy your projects"
+    url = "#"
+    parent = "tutorials"
+
+[[menu.main]]
+    name = "Demos"
+    parent = "projects"
+    identifier = "demos"
+    weight = 350
+
+[[menu.main]]
+    name = "Video demo"
+    url = "videos/"
+    parent = "demos"
+
+[[menu.main]]
+    name = "Live demo"
+    url = "demos/"
+    parent = "demos"
+
+[[menu.main]]
+    before = false
+    name  = "About"
+    url   = "about/"
+    weight = 400
 
 # Enter a link for the follow button on the left
 [params.profile]
