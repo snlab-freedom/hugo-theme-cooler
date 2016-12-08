@@ -117,6 +117,17 @@ theme = "hugo-theme-cooler"
     url   = "about/"
     weight = 400
 
+# Sidebars content
+[[params.widget.documentation]]
+    name = "Wiki"
+    url = "documentation/wiki/"
+[[params.widget.documentation]]
+    name = "Tutorial"
+    url = "documentation/tutorial/"
+[[params.widget.documentation]]
+    name = "other doc"
+    url = "#"
+
 # Enter a link for the follow button on the left
 [params.profile]
     follow_button = ""
@@ -160,4 +171,5 @@ theme = "hugo-theme-cooler"
     categories = true
     tags = true
     tag_cloud = true
+    download = false
 

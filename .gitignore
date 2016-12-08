@@ -2,3 +2,5 @@ public/
 bin/
 config.toml
 content
+.idea/
+exampleSite/themes
