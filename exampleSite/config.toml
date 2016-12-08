@@ -132,6 +132,12 @@ theme = "hugo-theme-cooler"
 [params.profile]
     follow_button = ""
 
+# Article First Content
+[params.article_first]
+    show = true
+    title = "An example title"
+    body = "An example body"
+    rss_show = true
 
 [social]
 # Add your social network accounts to the profile section on the left

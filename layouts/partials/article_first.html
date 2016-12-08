@@ -1,11 +1,19 @@
+<!-- You can change the content of here by editing config.toml -->
+
+{{ with .Site.Params.article_first}}
+{{ if .show }}
 <div class="article-inner-first">
 
 	<h2>
-		A simple, lightweight theme
+        {{ .title }}
 	</h2>
 	<p>
-		You've reached the website for <b>Arch Linux</b> user, I was in mobile-enabled.
+        {{ .body }}
 	</p>
 
 </div>
-	<div class="rss-right"><a href="{{ .RSSLink }}"><i class="fa fa-rss-square fa-lg"></i></a></div>
+{{ if .rss_show }}
+	<div class="rss-right"><a href="{{ $.Site.RSSLink }}"><i class="fa fa-rss-square fa-lg"></i></a></div>
+{{ end }} <!-- end for if .rss_show -->
+{{ end }} <!-- end for if .show -->
+{{ end }} <!-- end for with -->
