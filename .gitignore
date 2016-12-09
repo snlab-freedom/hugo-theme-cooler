@@ -3,4 +3,5 @@ bin/
 config.toml
 content
 .idea/
-exampleSite/
+exampleSite/public/
+exampleSite/themes/
