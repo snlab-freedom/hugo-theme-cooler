@@ -23,6 +23,10 @@ theme = "hugo-theme-cooler"
     # Format dates with Go's time formating
     date_format = "2006-01-02"
 
+    # Meta data for your website
+    title = "SNLab"
+    subtitle = "Freedom"
+
 # Create custom menu entries by defining a name and a url for
 # them. You can set weight to decide the index of each item.
 [[menu.main]]
