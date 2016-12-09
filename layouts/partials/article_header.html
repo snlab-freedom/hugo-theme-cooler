@@ -33,7 +33,7 @@
         {{ $tagsLen := len .Params.tags }}
         {{ if gt $tagsLen 0 }}
         <div class="article-category">
-		<i class="fa fa-chevron-right"></i>
+		<i class="fa fa-tag"></i>
 		<!--<i class="fa fa-file"></i>-->
             {{ range $k, $v := .Params.tags }}
             <a class="article-category-link" href="{{ $.Site.BaseURL }}tags/{{ . | urlize | lower }}">{{ . }}</a>

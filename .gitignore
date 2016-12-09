@@ -1,7 +1,5 @@
 public/
 bin/
-config.toml
-content
 .idea/
 exampleSite/public/
 exampleSite/themes/
