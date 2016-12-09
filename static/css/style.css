@@ -1978,8 +1978,11 @@ pre {
 	padding-bottom:10px;
 	border-bottom: 1px solid #ccc;
 }
-.rss-right{
-	margin:30px 10px 10px 10px;
+.social-right {
+	margin: 30px 10px 10px 10px;
+}
+.social-right a {
+	margin-left: 10px;
 }
 
 .widget-title {

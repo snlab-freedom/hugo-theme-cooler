@@ -1,7 +1,8 @@
 <!-- You can change the content of here by editing config.toml -->
 
+{{ $globalScope := . }}
 {{ with .Site.Params.article_first}}
-{{ if .show }}
+{{ if or .title .body }}
 <div class="article-inner-first">
 
 	<h2>
@@ -12,8 +13,11 @@
 	</p>
 
 </div>
-{{ if .rss_show }}
-	<div class="rss-right"><a href="{{ $.Site.RSSLink }}"><i class="fa fa-rss-square fa-lg"></i></a></div>
-{{ end }} <!-- end for if .rss_show -->
 {{ end }} <!-- end for if .show -->
+<div class="social-right">
+{{ partial "article_first_social" $globalScope }}
+{{ if .rss_show }}
+  <a href="{{ $.Site.RSSLink }}"><i class="fa fa-rss-square fa-lg"></i></a>
+{{ end }} <!-- end for if .rss_show -->
+</div>
 {{ end }} <!-- end for with -->
