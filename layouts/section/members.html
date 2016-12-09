@@ -8,8 +8,17 @@
                     <span class="archive-category">{{ .Title }}</span>
                 </div>
                 <div class="archives">
-                    {{ range .Data.Pages.ByWeight }}
-                    {{ .Render "summary" }}
+                    {{ $pages_origin := .Data.Pages.ByWeight }}
+                    {{ range $positions := $.Site.Params.members}}
+                        {{ $members := where $pages_origin "Params.position" $positions.position}}
+                        {{ if len $members }}
+                            <h1>{{ $positions.position }}</h1>
+                        {{ end }}
+                        {{ range $members }}
+                            {{ if eq .Params.position $positions.position}}
+                                {{ .Render "summary" }}
+                            {{ end }}
+                        {{ end }}
                     {{ end }}
                 </div>
             </section>

@@ -1,9 +1,9 @@
 +++
 date = "2016-01-03"
 menu = ""
-title = "Jace Liu"
+title = "Jace Liu 2"
 avatar = "images/download.png"
-position = "Undergraduate"
+position = "Graduate"
 categories = ["members"]
 tags = ["members"]
 weight = 10

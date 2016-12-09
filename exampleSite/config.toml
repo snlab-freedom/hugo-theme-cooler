@@ -145,6 +145,17 @@ theme = "hugo-theme-cooler"
     body = "An example body"
     rss_show = true
 
+[[params.members]]
+    position = "Director"
+[[params.members]]
+    position = "Faculty"
+[[params.members]]
+    position = "Postdocs"
+[[params.members]]
+    position = "Graduate"
+[[params.members]]
+    position = "Undergraduate"
+
 [social]
 # Add your social network accounts to the profile section on the left
 # by entering your username. The links to your account will be
