@@ -132,14 +132,11 @@ theme = "hugo-theme-cooler"
 
 # Sidebars content
 [[params.widget.documentation]]
-    name = "Wiki"
-    url = "/wiki"
+    name = "Demos"
+    url = "/demos"
 [[params.widget.documentation]]
     name = "Tutorials"
     url = "/tutorials"
-[[params.widget.documentation]]
-    name = "other doc"
-    url = "#"
 
 # Enter a link for the follow button on the left
 [params.profile]
