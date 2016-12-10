@@ -37,7 +37,7 @@ theme = "hugo-theme-cooler"
 
 [[menu.main]]
     name   = "Posts"
-    url    = "posts/"
+    url    = "/posts"
     identifier = "posts"
     weight = 100
 
@@ -49,7 +49,7 @@ theme = "hugo-theme-cooler"
 
 [[menu.main]]
     name  = "Publications"
-    url   = "publications/"
+    url   = "/publications"
     identifier = "publications"
     weight = 200
 
@@ -109,27 +109,27 @@ theme = "hugo-theme-cooler"
 
 [[menu.main]]
     name = "Video demo"
-    url = "videos/"
+    url = "/videos"
     parent = "demos"
 
 [[menu.main]]
     name = "Live demo"
-    url = "demos/"
+    url = "/demos"
     parent = "demos"
 
 [[menu.main]]
     before = false
     name  = "About"
-    url   = "about/"
+    url   = "/about"
     weight = 400
 
 # Sidebars content
 [[params.widget.documentation]]
     name = "Wiki"
-    url = "documentation/wiki/"
+    url = "/wiki"
 [[params.widget.documentation]]
     name = "Tutorial"
-    url = "documentation/tutorial/"
+    url = "/tutorial"
 [[params.widget.documentation]]
     name = "other doc"
     url = "#"
