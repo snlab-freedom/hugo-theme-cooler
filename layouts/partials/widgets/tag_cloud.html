@@ -4,10 +4,24 @@
     <h3 class="widget-title">
 	    {{with .Site.Data.l10n.widgets.tag_cloud.title}}{{.}}{{end}}
     </h3>
-    <div class="widget tagcloud">
+    <div class="widget">
+      <div id="tagdefault" class="tagcloud">
         {{ range $name, $items := .Site.Taxonomies.tags }}
         <a href="{{ $.Site.BaseURL }}tags/{{ $name | urlize | lower  }}" style="font-size: 12px;">{{ $name }}</a>
         {{ end }}
+      </div>
+      <div id="canvascontainer">
+        <canvas id="tagcanvas" height="200">
+          <p>Anything in here will be replaced on browsers that support the canvas element</p>
+        </canvas>
+      </div>
+      <div id="tags">
+        <ul>
+          {{ range $name, $items := .Site.Taxonomies.tags }}
+          <li><a href="{{ $.Site.BaseURL }}tags/{{ $name | urlize | lower  }}">{{ $name }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
     </div>
 </div>
 {{ end }}

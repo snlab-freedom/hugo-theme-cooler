@@ -26,5 +26,33 @@
 <script type="text/javascript" src="{{ .Site.BaseURL }}bower_components/bluebird/js/browser/bluebird.js"></script>
 <script type="text/javascript" src="{{ .Site.BaseURL }}bower_components/talaria/dist/talaria.js"></script>
 
+<!-- tagcanvas -->
+<!--[if lt IE 9]><script type="text/javascript" src="{{ .Site.BaseURL }}bower_components/tagcanvas/excanvas.js"></script><![endif]-->
+<script src="{{ .Site.BaseURL }}bower_components/tagcanvas/tagcanvas.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+ $(document).ready(function() {
+   try {
+     TagCanvas.Start('tagcanvas','tags',{
+       textColour: '#777',
+       outlineColour: '#333',
+       reverse: true,
+       depth: 0.8,
+       maxSpeed: 0.05
+     });
+     var width = $('#canvascontainer').width();
+     $('#tagcanvas').width(width);
+     $('#tagdefault').hide();
+   } catch(e) {
+     // something went wrong, hide the canvas container
+     $('#canvascontainer').hide();
+   }
+
+   $(window).resize(function() {
+     var width = $('#canvascontainer').width();
+     $('#tagcanvas').width(width);
+   });
+ });
+</script>
+
 <!-- highlightjs -->
 <!--<script src="{{ .Site.BaseURL }}bower_components/highlightjs/highlight.pack.min.js"></script>-->
