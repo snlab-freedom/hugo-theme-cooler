@@ -3,7 +3,18 @@
 
 <div id="container">
    <div class="outer">
-    {{ partial "single_article" . }}
+     <section id="main">
+       <article>
+         <div class="article-inner">
+           <div class="article-entry" itemprop="articleBody">
+             <h2 id="subtitle">{{ .Title }}</h2>
+             {{ .Content }}
+           </div>
+         </div>
+
+       </article>
+
+     </section>
     {{ partial "sidebar" . }}
 </div>
 </div>
