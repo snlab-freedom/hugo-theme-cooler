@@ -8,13 +8,17 @@ title = "Creating a new theme tutorial"
 
 ## Overview
 
-Hugo is a static HTML and CSS website generator written in [Go][].
+Hugo is a static HTML and CSS website generator written in [Go](https://golang.org/).
 It is optimized for speed, easy use and configurability.
 Hugo takes a directory with content and templates and renders them into a full HTML website.
 
 Hugo relies on Markdown files with front matter for meta data.
 And you can run Hugo from any directory.
-This works well for shared hosts and other s{{ partial "head" . }} {{ partial "header" . }}
+This works well for shared hosts and others
+
+``` html
+{{ partial "head" . }}
+{{ partial "header" . }}
 
 <div id="container">
     <div class="outer">
@@ -38,6 +42,7 @@ This works well for shared hosts and other s{{ partial "head" . }} {{ partial "h
 {{ partial "footer" . }}
 </body>
 </html>ystems where you don’t have a privileged account.
+```
 
 Hugo renders a typical website of moderate size in a fraction of a second.
 A good rule of thumb is that each piece of content renders in around 1 millisecond.
