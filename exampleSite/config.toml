@@ -135,8 +135,8 @@ theme = "hugo-theme-cooler"
     name = "Wiki"
     url = "/wiki"
 [[params.widget.documentation]]
-    name = "Tutorial"
-    url = "/tutorial"
+    name = "Tutorials"
+    url = "/tutorials"
 [[params.widget.documentation]]
     name = "other doc"
     url = "#"
