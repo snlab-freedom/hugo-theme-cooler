@@ -2075,3 +2075,66 @@ div.talaria-wrapper div.talaria-comment-body {
 #header a, #header a:hover {
 	color: #38B7EA !important;
 }
+
+/*************************************************
+ *  Override Button in Main Block
+ **************************************************/
+
+#main .btn {
+  border-radius: 4px;
+}
+
+/*************************************************
+ *  Button Primary: Color Override
+ **************************************************/
+
+#main .btn-primary {
+  border-color: #0095eb;
+}
+
+#main .btn-primary:hover,
+#main .btn-primary:focus,
+#main .btn-primary:active,
+#main .btn-primary.active,
+#main .open > .dropdown-toggle.btn-primary {
+  background: #0095eb;
+}
+
+/*************************************************
+ *  Button Outlines
+ **************************************************/
+
+#main .btn-outline {
+  background-color: transparent;
+  color: inherit;
+  transition: all .5s;
+}
+
+#main .btn-primary.btn-outline {
+  color: #0095eb;
+  border-color: #0095eb;
+}
+
+#main .btn-success.btn-outline {
+  color: #5cb85c;
+}
+
+#main .btn-info.btn-outline {
+  color: #5bc0de;
+}
+
+#main .btn-warning.btn-outline {
+  color: #f0ad4e;
+}
+
+#main .btn-danger.btn-outline {
+  color: #d9534f;
+}
+
+#main .btn-primary.btn-outline:hover,
+#main .btn-success.btn-outline:hover,
+#main .btn-info.btn-outline:hover,
+#main .btn-warning.btn-outline:hover,
+#main .btn-danger.btn-outline:hover {
+  color: #fff;
+}

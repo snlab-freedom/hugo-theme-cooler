@@ -23,4 +23,4 @@ Insert a video demo for your project:
 
 ### Live Demo ###
 
-You can show your live demo here: <button class="btn btn-default" onclick="location.href='/';">Demo</button>.
+You can show your live demo here: <a class="btn btn-primary btn-outline" href="/">Demo</a>.
