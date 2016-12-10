@@ -1,0 +1,38 @@
+{{ partial "head" . }} {{ partial "header" . }}
+<div class="container">
+  <section id="main">
+    {{ partial "academic_style" .}}
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Publications</h1>
+
+        {{ range .Data.Pages.GroupByDate "2006" }}
+        <div class="row" id="pub_list">
+          <div class="col-md-2">
+            <h2>{{ .Key }}</h2>
+          </div>
+          <div class="col-md-10">
+            <ul class="compact fa-ul">
+
+              {{ range .Pages.ByDate.Reverse }}
+              <li>
+                <i class="fa-li fa fa-file-text-o" aria-hidden="true"
+                   style="color:#03396c; font-size: 14px;padding-top:6px;"></i>
+                <a href="{{.Permalink}}" style="font-size: 20px; color: black;">{{ .Title }}</a>
+                <p>{{ partial "publication_links" (dict "content" . "is_list" 1) }}</p>
+              </li>
+              {{ end }}
+
+            </ul>
+          </div>
+        </div>
+        {{ end }}
+
+      </div>
+    </div>
+  </section>
+  {{ partial "sidebar" . }}
+</div>
+{{ partial "footer" . }}
+</body>
+</html>
