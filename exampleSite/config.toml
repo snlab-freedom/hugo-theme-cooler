@@ -60,28 +60,35 @@ theme = "hugo-theme-cooler"
 
 # You can set the nested submenu by indicate the parent.
 [[menu.main]]
-    name = "Project1"
-    url = "#"
+    name = "Project List"
+    url = "/projects"
     parent = "projects"
     weight = 300
 
 [[menu.main]]
-    name = "Project2"
-    url = "#"
+    pre = "<li role ='separator' class='divider'></li>"
+    name = "Project1"
+    url = "/projects/project1/"
     parent = "projects"
     weight = 310
 
 [[menu.main]]
-    name = "Project3"
-    url = "#"
+    name = "Project2"
+    url = "/projects/project2/"
     parent = "projects"
     weight = 320
 
 [[menu.main]]
-    name = "Project4"
-    url = "#"
+    name = "Project3"
+    url = "/projects/project3/"
     parent = "projects"
     weight = 330
+
+[[menu.main]]
+    name = "Project4"
+    url = "/projects/project4/"
+    parent = "projects"
+    weight = 340
 
 # Set a `pre` attribute for a submenu to display a divider.
 [[menu.main]]
@@ -89,7 +96,7 @@ theme = "hugo-theme-cooler"
     name = "Tutorials"
     parent = "projects"
     identifier = "tutorials"
-    weight = 340
+    weight = 380
 
 [[menu.main]]
     name = "Write your first project"
@@ -105,7 +112,7 @@ theme = "hugo-theme-cooler"
     name = "Demos"
     parent = "projects"
     identifier = "demos"
-    weight = 350
+    weight = 390
 
 [[menu.main]]
     name = "Video demo"
