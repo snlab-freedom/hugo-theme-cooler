@@ -4,7 +4,7 @@
         <div class="archive-article-thumbnail">
 
             {{ if isset .Params "avatar" }}
-            <a href="{{ .Permalink }}" class="thumbnail">
+            <a href="{{ .Permalink }}" class="thumbnail" style="width:150px; height:150px">
                 <span style="background-image:url({{ .Site.BaseURL }}{{ .Params.avatar}})" alt="{{ .Title }}" class="thumbnail-image"></span>
             </a>
             {{ else }}
