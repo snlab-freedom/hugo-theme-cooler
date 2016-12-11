@@ -3,3 +3,5 @@ bin/
 .idea/
 exampleSite/public/
 exampleSite/themes/
+.DS_Store
+*.swp
