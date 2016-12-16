@@ -5,12 +5,13 @@
 {{ if or .title .body }}
 <div class="article-inner-first">
 
-	<h2>
-        {{ .title }}
-	</h2>
-	<p>
-        {{ .body }}
-	</p>
+	<h2>{{ .title | html }}</h2>
+  {{ range .body }}
+	<p>{{ . | html }}</p>
+  {{ end }}
+  <p class="readmore">
+    <a class="btn btn-primary btn-outline btn-sm" href="/about" title="Learn more about {{ $.Site.Title }}">Learn more...</a>
+  </p>
 
 </div>
 {{ end }} <!-- end for if .show -->

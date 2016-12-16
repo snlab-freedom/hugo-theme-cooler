@@ -1978,6 +1978,11 @@ pre {
 	padding-bottom:10px;
 	border-bottom: 1px solid #ccc;
 }
+.article-inner-first p.readmore {
+  margin: -0.5em 0 0 0;
+  font-size: .9em;
+  text-align: right;
+}
 .social-right {
 	margin: 30px 10px 10px 10px;
 }
