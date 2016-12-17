@@ -144,9 +144,10 @@ theme = "hugo-theme-cooler"
 
 # Article First Content
 [params.article_first]
-    show = true
     title = "An example title"
-    body = "An example body"
+    body = [
+    "An example body"
+    ]
     rss_show = true
 
 [[params.members]]
@@ -174,7 +175,7 @@ theme = "hugo-theme-cooler"
     behance         = ""
     flickr          = ""
     instagram       = ""
-    youtube         = "channel/token"
+    youtube         = "token"
     vimeo           = ""
     vine            = ""
     medium          = ""
