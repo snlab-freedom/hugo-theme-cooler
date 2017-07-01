@@ -1,17 +1,16 @@
 name = "Arch"
 license = "MIT"
-licenselink = "https://github.com/syui/hugo-theme-air/blob/master/LICENSE.md"
-description = "Arch Linux Themes"
-homepage = "https://syui.github.io/hugo-theme-arch"
+licenselink = "https://github.com/snlab-freedom/hugo-theme-cooler/blob/master/LICENSE"
+description = "Hugo Theme Cooler"
+homepage = "https://snlab-freedom.github.io/hugo-theme-cooler"
 tags = ["blog"]
 features = ["arch linux","bootstrap", "talaria"]
 min_version=0.15
 
 [author]
-  name = "syui"
-  homepage = "https://syui.github.io"
+    name = "SNLab.Org"
+    homepage = "https://snlab-freedom.github.io"
 
 [original]
-    author = "archlinux"
-    homepage = "https://archlinux.org"
-    repo = "https://github.com/archlinux/archweb"
+    name = "syui"
+    homepage = "https://syui.github.io"

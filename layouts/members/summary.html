@@ -1,10 +1,10 @@
-<article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
+<div class="archive-member col-sm-4 col-md-3 col-xs-2">
+    <div class="archive-member-inner">
 
-        <div class="archive-article-thumbnail">
+        <div class="archive-member-thumbnail">
 
             {{ if isset .Params "avatar" }}
-            <a href="{{ .Permalink }}" class="thumbnail" style="width:150px; height:150px">
+            <a href="{{ .Permalink }}" class="thumbnail">
                 <span style="background-image:url({{ .Site.BaseURL }}{{ .Params.avatar}})" alt="{{ .Title }}" class="thumbnail-image"></span>
             </a>
             {{ else }}
@@ -13,14 +13,17 @@
             </a>
             {{ end }}
         </div>
-        <header class="archive-article-header">
-            <h1 itemprop="name">
-                <a class="archive-article-title" href="{{ .Permalink }}">{{ .Title }}</a>&nbsp;
-            </h1>
-            <div class="archive-article-date">
+        <div class="archive-member-header">
+            <span itemprop="name" class="display-name">
+                <a class="archive-member-title" href="{{ .Permalink }}">{{ .Title }}</a>&nbsp;
+            </span>
+            <div class="archive-member-date">
                 <!--<i class="fa fa-calendar"></i>-->
-                <div> {{.Params.position}} </div>
+                <!-- <div> {{.Params.position}} </div> -->
+                {{ if isset .Params "email" }}
+                <a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a>&nbsp;
+                {{ end }}
             </div>
-        </header>
+        </div>
     </div>
-</article>
+</div>

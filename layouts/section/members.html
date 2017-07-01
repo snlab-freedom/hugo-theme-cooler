@@ -12,12 +12,16 @@
                     {{ range $positions := $.Site.Params.members}}
                         {{ $members := where $pages_origin "Params.position" $positions.position}}
                         {{ if len $members }}
-                            <h1>{{ $positions.position }}</h1>
-                        {{ end }}
-                        {{ range $members }}
-                            {{ if eq .Params.position $positions.position}}
-                                {{ .Render "summary" }}
+                            <div class="row">
+                                <div class="member-position col-sm-12 col-md-12 col-xd-12">
+                                    <h1>{{ $positions.position }}</h1>
+                                </div>
+                            {{ range $members }}
+                                {{ if eq .Params.position $positions.position}}
+                                    {{ .Render "summary" }}
+                                {{ end }}
                             {{ end }}
+                            </div>
                         {{ end }}
                     {{ end }}
                 </div>
