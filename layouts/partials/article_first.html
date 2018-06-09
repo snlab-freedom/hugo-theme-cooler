@@ -7,7 +7,7 @@
 
 	<h2>{{ .title | html }}</h2>
   {{ range .body }}
-	<p>{{ . | html }}</p>
+	<p>{{ . | markdownify }}</p>
   {{ end }}
   <p class="readmore">
     <a class="btn btn-primary btn-outline btn-sm" href="/about" title="Learn more about {{ $.Site.Title }}">Learn more...</a>
